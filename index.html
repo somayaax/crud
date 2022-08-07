@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="w-75 mx-auto my-5">
+        <div class="mb-3">
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="productPrice">Product price</label>
+            <input type="number" id="productPrice" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="productCategory">Product category</label>
+            <input type="text" id="productCategory" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="productDesc">Product Description</label>
+            <textarea type="text" id="productDesc" class="form-control">
+                </textarea>
+        </div>
+        <button id="add" onclick="addProduct()" class="btn btn-outline-info">Add Product</button>
+        <button id="update" onclick="addUpdate()" style="display: none;" class="btn btn-outline-info">Update Product</button>
+    </div>
+
+    <div class="container">
+        <input type="text" class="form-control w-75 mx-auto mb-5 " onkeyup="search(this.value)" placeholder="search....." id="searchInput">
+        <table class="table">
+            <thead>
+                <th>index</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>productCategory</th>
+                <th>productDescription</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
